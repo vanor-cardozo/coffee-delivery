@@ -5,7 +5,7 @@ export const coffeeData = [
     description: 'O tradicional café feito com água quente e grãos moídos',
     price: 7.9,
     classification: ['tradicional'],
-    coffeeImage: '/src/assets/coffeeImages/coffee01.png',
+    coffeeImage: 'coffee01.png',
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const coffeeData = [
     description: 'Expresso diluído, menos intenso que o tradicional',
     price: 7.9,
     classification: ['tradicional'],
-    coffeeImage: '/src/assets/coffeeImages/coffee02.png',
+    coffeeImage: 'coffee02.png',
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const coffeeData = [
     description: 'Café expresso tradicional com espuma cremosa',
     price: 7.9,
     classification: ['tradicional'],
-    coffeeImage: '/src/assets/coffeeImages/coffee03.png',
+    coffeeImage: 'coffee03.png',
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const coffeeData = [
     description: 'Bebida preparada com café expresso e cubos de gelo',
     price: 7.9,
     classification: ['tradicional', 'gelado'],
-    coffeeImage: '/src/assets/coffeeImages/coffee04.png',
+    coffeeImage: 'coffee04.png',
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const coffeeData = [
     description: 'Meio a meio de expresso tradicional com leite vaporizado',
     price: 8.5,
     classification: ['tradicional', 'com leite'],
-    coffeeImage: '/src/assets/coffeeImages/coffee05.png',
+    coffeeImage: 'coffee05.png',
   },
   {
     id: 6,
@@ -46,7 +46,7 @@ export const coffeeData = [
       'Uma dose de café expresso com o dobro de leite e espuma cremosa',
     price: 8.5,
     classification: ['tradicional', 'com leite'],
-    coffeeImage: '/src/assets/coffeeImages/coffee06.png',
+    coffeeImage: 'coffee06.png',
   },
   {
     id: 7,
@@ -55,7 +55,7 @@ export const coffeeData = [
       'Bebida com canela feita de doses iguais de café, leite e espuma',
     price: 8.5,
     classification: ['tradicional', 'com leite'],
-    coffeeImage: '/src/assets/coffeeImages/coffee07.png',
+    coffeeImage: 'coffee07.png',
   },
   {
     id: 8,
@@ -64,7 +64,7 @@ export const coffeeData = [
       'Café expresso misturado com um pouco de leite quente e espuma',
     price: 8.5,
     classification: ['tradicional', 'com leite'],
-    coffeeImage: '/src/assets/coffeeImages/coffee08.png',
+    coffeeImage: 'coffee08.png',
   },
   {
     id: 9,
@@ -72,7 +72,7 @@ export const coffeeData = [
     description: 'Café expresso com calda de chocolate, pouco leite e espuma',
     price: 8.5,
     classification: ['tradicional', 'com leite'],
-    coffeeImage: '/src/assets/coffeeImages/coffee09.png',
+    coffeeImage: 'coffee09.png',
   },
   {
     id: 10,
@@ -80,7 +80,7 @@ export const coffeeData = [
     description: 'Bebida feita com chocolate dissolvido no leite quente e café',
     price: 9.9,
     classification: ['especial', 'com leite'],
-    coffeeImage: '/src/assets/coffeeImages/coffee10.png',
+    coffeeImage: 'coffee10.png',
   },
   {
     id: 11,
@@ -89,7 +89,7 @@ export const coffeeData = [
       'Drink gelado de café expresso com rum, creme de leite e hortelã',
     price: 9.9,
     classification: ['especial', 'alcoólico', 'gelado'],
-    coffeeImage: '/src/assets/coffeeImages/coffee11.png',
+    coffeeImage: 'coffee11.png',
   },
   {
     id: 12,
@@ -97,7 +97,7 @@ export const coffeeData = [
     description: 'Bebida adocicada preparada com café e leite de coco',
     price: 9.9,
     classification: ['especial'],
-    coffeeImage: '/src/assets/coffeeImages/coffee12.png',
+    coffeeImage: 'coffee12.png',
   },
   {
     id: 13,
@@ -105,7 +105,7 @@ export const coffeeData = [
     description: 'Bebida preparada com grãos de café árabe e especiarias',
     price: 9.9,
     classification: ['especial'],
-    coffeeImage: '/src/assets/coffeeImages/coffee13.png',
+    coffeeImage: 'coffee13.png',
   },
   {
     id: 14,
@@ -113,6 +113,6 @@ export const coffeeData = [
     description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
     price: 9.9,
     classification: ['especial'],
-    coffeeImage: '/src/assets/coffeeImages/coffee14.png',
+    coffeeImage: 'coffee14.png',
   },
 ]
