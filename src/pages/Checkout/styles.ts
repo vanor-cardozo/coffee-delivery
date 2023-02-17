@@ -4,6 +4,7 @@ export const CheckoutContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  gap: 1rem;
 
   h4 {
     font-family: 'Baloo 2';
@@ -38,7 +39,7 @@ export const FormDiv = styled.div`
     }
   }
 `
-export const TitleAndSubtitleDiv = styled.div`
+const TitleAndSubtitleBase = styled.div`
   display: flex;
   color: ${(props) => props.theme['yellow-dark']};
   padding: 2rem;
@@ -57,7 +58,24 @@ export const TitleAndSubtitleDiv = styled.div`
     color: ${(props) => props.theme['base-subtitle']};
   }
 `
+
+export const TitleAndSubtitleLocation = styled(TitleAndSubtitleBase)`
+  color: ${(props) => props.theme['yellow-dark']};
+`
+
+export const TitleAndSubtitlePayment = styled(TitleAndSubtitleBase)`
+  color: ${(props) => props.theme['purple-dark']};
+`
 export const TextDiv = styled.div`
   display: flex;
   flex-direction: column;
+`
+export const PaymentDiv = styled.div`
+  flex-direction: column;
+  background: ${(props) => props.theme['base-card']};
+  border-radius: 8px;
+`
+
+export const ButtonsDiv = styled.div`
+  display: flex;
 `

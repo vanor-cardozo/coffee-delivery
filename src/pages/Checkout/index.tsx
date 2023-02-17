@@ -1,13 +1,17 @@
 import {
+  ButtonsDiv,
   CheckoutContainer,
   FormDiv,
+  PaymentDiv,
   TextDiv,
   TitleAndSubtitleDiv,
+  TitleAndSubtitleLocation,
+  TitleAndSubtitlePayment,
 } from './styles'
 
 import cep from 'cep-promise'
 import React, { useState } from 'react'
-import { MapPinLine } from 'phosphor-react'
+import { CurrencyDollar, MapPinLine } from 'phosphor-react'
 
 export function Checkout() {
   const [customerAddress, setCustomerAddress] = useState({
@@ -63,13 +67,13 @@ export function Checkout() {
     <CheckoutContainer>
       <h4>Complete seu pedido</h4>
       <FormDiv>
-        <TitleAndSubtitleDiv>
+        <TitleAndSubtitleLocation>
           <MapPinLine size={22} />
           <TextDiv>
             <h5>Endereço de Entrega</h5>
             <p>Informe o endereço onde deseja receber seu pedido</p>
           </TextDiv>
-        </TitleAndSubtitleDiv>
+        </TitleAndSubtitleLocation>
         {/* <form onSubmit={handleSubmit}>          */}
         <form>
           <label id="cep">
@@ -152,6 +156,19 @@ export function Checkout() {
           {/* <button type="submit">enviar</button> */}
         </form>
       </FormDiv>
+
+      <PaymentDiv>
+        <TitleAndSubtitlePayment>
+          <CurrencyDollar size={22} />
+          <TextDiv>
+            <h5>Pagamento</h5>
+            <p>
+              O pagamento é feito na entrega. Escolha a forma que deseja pagar
+            </p>
+          </TextDiv>
+          <ButtonsDiv></ButtonsDiv>
+        </TitleAndSubtitlePayment>
+      </PaymentDiv>
     </CheckoutContainer>
   )
 }
