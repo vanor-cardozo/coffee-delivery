@@ -3,14 +3,15 @@ import styled from 'styled-components'
 export const HomeContainer = styled.main`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 `
 export const SloganContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40%;
-  background: '#105';
+  width: 50%;
 
   h1 {
     font-family: 'Baloo 2';
