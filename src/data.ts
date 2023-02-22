@@ -6,6 +6,7 @@ export const coffeeData = [
     price: 7.9,
     classification: ['tradicional'],
     coffeeImage: 'coffee01.png',
+    quantity: 0,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const coffeeData = [
     price: 7.9,
     classification: ['tradicional'],
     coffeeImage: 'coffee02.png',
+    quantity: 0,
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const coffeeData = [
     price: 7.9,
     classification: ['tradicional'],
     coffeeImage: 'coffee03.png',
+    quantity: 0,
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const coffeeData = [
     price: 7.9,
     classification: ['tradicional', 'gelado'],
     coffeeImage: 'coffee04.png',
+    quantity: 0,
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const coffeeData = [
     price: 8.5,
     classification: ['tradicional', 'com leite'],
     coffeeImage: 'coffee05.png',
+    quantity: 0,
   },
   {
     id: 6,
@@ -47,6 +52,7 @@ export const coffeeData = [
     price: 8.5,
     classification: ['tradicional', 'com leite'],
     coffeeImage: 'coffee06.png',
+    quantity: 0,
   },
   {
     id: 7,
@@ -56,6 +62,7 @@ export const coffeeData = [
     price: 8.5,
     classification: ['tradicional', 'com leite'],
     coffeeImage: 'coffee07.png',
+    quantity: 0,
   },
   {
     id: 8,
@@ -65,6 +72,7 @@ export const coffeeData = [
     price: 8.5,
     classification: ['tradicional', 'com leite'],
     coffeeImage: 'coffee08.png',
+    quantity: 0,
   },
   {
     id: 9,
@@ -73,6 +81,7 @@ export const coffeeData = [
     price: 8.5,
     classification: ['tradicional', 'com leite'],
     coffeeImage: 'coffee09.png',
+    quantity: 0,
   },
   {
     id: 10,
@@ -81,6 +90,7 @@ export const coffeeData = [
     price: 9.9,
     classification: ['especial', 'com leite'],
     coffeeImage: 'coffee10.png',
+    quantity: 0,
   },
   {
     id: 11,
@@ -90,6 +100,7 @@ export const coffeeData = [
     price: 9.9,
     classification: ['especial', 'alcoólico', 'gelado'],
     coffeeImage: 'coffee11.png',
+    quantity: 0,
   },
   {
     id: 12,
@@ -98,6 +109,7 @@ export const coffeeData = [
     price: 9.9,
     classification: ['especial'],
     coffeeImage: 'coffee12.png',
+    quantity: 0,
   },
   {
     id: 13,
@@ -106,6 +118,7 @@ export const coffeeData = [
     price: 9.9,
     classification: ['especial'],
     coffeeImage: 'coffee13.png',
+    quantity: 0,
   },
   {
     id: 14,
@@ -114,5 +127,6 @@ export const coffeeData = [
     price: 9.9,
     classification: ['especial'],
     coffeeImage: 'coffee14.png',
+    quantity: 0,
   },
 ]

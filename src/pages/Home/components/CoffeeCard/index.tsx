@@ -12,13 +12,35 @@ import {
 
 import { coffeeData } from '../../../../data'
 import { Minus, Plus, ShoppingCart } from 'phosphor-react'
+import { useState } from 'react'
 
 export function CoffeeCard() {
+  const [customerCart, setCustomerCart] = useState(coffeeData)
+  // const [quantity, setQuantity] = useState(0)
+
+  const addQuantity = (id: number) => {
+    const findCoffee = customerCart.findIndex((coffee) => coffee.id === id)
+    const tempCustomerCart = [...customerCart]
+    tempCustomerCart[findCoffee].quantity =
+      tempCustomerCart[findCoffee].quantity + 1
+    setCustomerCart(tempCustomerCart)
+  }
+
+  const minusQuantity = (id: number) => {
+    const findCoffee = customerCart.findIndex((coffee) => coffee.id === id)
+    const tempCustomerCart = [...customerCart]
+    if (tempCustomerCart[findCoffee].quantity > 0) {
+      tempCustomerCart[findCoffee].quantity =
+        tempCustomerCart[findCoffee].quantity - 1
+      setCustomerCart(tempCustomerCart)
+    }
+  }
+
   return (
     <>
       <CardsContainer>
         <TitleMenu>Nossos cafés</TitleMenu>
-        {coffeeData.map((coffee) => (
+        {customerCart.map((coffee) => (
           <CardContainer key={coffee.id}>
             <DivCardHeader>
               <img src={coffee.coffeeImage} alt={coffee.name} />
@@ -33,9 +55,9 @@ export function CoffeeCard() {
                 <h5>R$</h5>
                 <h4>{coffee.price.toFixed(2)}</h4>
                 <SelectButtons>
-                  <Minus size={22} />
-                  <h6>1</h6>
-                  <Plus size={22} />
+                  <Minus size={22} onClick={() => minusQuantity(coffee.id)} />
+                  <h6>{coffee.quantity}</h6>
+                  <Plus size={22} onClick={() => addQuantity(coffee.id)} />
                 </SelectButtons>
                 <CartButton>
                   <ShoppingCart size={22} weight="fill" />
