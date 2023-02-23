@@ -10,31 +10,15 @@ import {
   TitleMenu,
 } from './styles'
 
-import { coffeeData } from '../../../../data'
 import { Minus, Plus, ShoppingCart } from 'phosphor-react'
-import { useState } from 'react'
+
+import { useContext } from 'react'
+import { CoffeeContext } from '../../../../context/CoffeeContext'
+import { useNavigate } from 'react-router-dom'
 
 export function CoffeeCard() {
-  const [customerCart, setCustomerCart] = useState(coffeeData)
-  // const [quantity, setQuantity] = useState(0)
-
-  const addQuantity = (id: number) => {
-    const findCoffee = customerCart.findIndex((coffee) => coffee.id === id)
-    const tempCustomerCart = [...customerCart]
-    tempCustomerCart[findCoffee].quantity =
-      tempCustomerCart[findCoffee].quantity + 1
-    setCustomerCart(tempCustomerCart)
-  }
-
-  const minusQuantity = (id: number) => {
-    const findCoffee = customerCart.findIndex((coffee) => coffee.id === id)
-    const tempCustomerCart = [...customerCart]
-    if (tempCustomerCart[findCoffee].quantity > 0) {
-      tempCustomerCart[findCoffee].quantity =
-        tempCustomerCart[findCoffee].quantity - 1
-      setCustomerCart(tempCustomerCart)
-    }
-  }
+  const { addQuantity, minusQuantity, customerCart } = useContext(CoffeeContext)
+  const navigate = useNavigate()
 
   return (
     <>
@@ -60,7 +44,11 @@ export function CoffeeCard() {
                   <Plus size={22} onClick={() => addQuantity(coffee.id)} />
                 </SelectButtons>
                 <CartButton>
-                  <ShoppingCart size={22} weight="fill" />
+                  <ShoppingCart
+                    size={22}
+                    weight="fill"
+                    onClick={() => navigate('/checkout')}
+                  />
                 </CartButton>
               </DivCardFooter>
             </DivCardHeader>
