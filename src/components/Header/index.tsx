@@ -22,12 +22,8 @@ export function Header() {
         <img src={logo} alt="" />
       </span>
       <nav>
-        <LocationButton>
-          <MapPin
-            size={22}
-            weight="fill"
-            onClick={() => navigate('/checkout')}
-          />
+        <LocationButton onClick={() => navigate('/checkout')}>
+          <MapPin size={22} weight="fill" />
           {customerAddress.city &&
             `${customerAddress.city}, ${customerAddress.state}`}
         </LocationButton>
