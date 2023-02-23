@@ -28,6 +28,15 @@ export function CoffeeContextProvider({
   children,
 }: CoffeeContextProviderProps) {
   const [customerCart, setCustomerCart] = useState(coffeeData)
+  const [customerAddress, setCustomerAddress] = useState({
+    customerCep: '',
+    state: '',
+    city: '',
+    neighborhood: '',
+    street: '',
+    number: '',
+    complement: '',
+  })
 
   function addQuantity(id: number) {
     const findCoffee = customerCart.findIndex((coffee) => coffee.id === id)
@@ -51,6 +60,8 @@ export function CoffeeContextProvider({
       value={{
         customerCart,
         setCustomerCart,
+        customerAddress,
+        setCustomerAddress,
         addQuantity,
         minusQuantity,
       }}
