@@ -1,18 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import { MapPinLine } from 'phosphor-react'
 import { FormDiv, TextDiv, TitleAndSubtitleLocation } from './styles'
 import cep from 'cep-promise'
 
+import { CoffeeContext } from '../../../../context/CoffeeContext'
+
 export function AddressForm() {
-  const [customerAddress, setCustomerAddress] = useState({
-    customerCep: '',
-    state: '',
-    city: '',
-    neighborhood: '',
-    street: '',
-    number: '',
-    complement: '',
-  })
+  const { customerAddress, setCustomerAddress } = useContext(CoffeeContext)
 
   const handleCepChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const cepNumber = e.target.value
@@ -48,10 +42,6 @@ export function AddressForm() {
     setCustomerAddress({ ...customerAddress, [name]: value })
   }
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   console.log(customerAddress)
-  // }
   return (
     <FormDiv>
       <TitleAndSubtitleLocation>
@@ -61,7 +51,6 @@ export function AddressForm() {
           <p>Informe o endereço onde deseja receber seu pedido</p>
         </TextDiv>
       </TitleAndSubtitleLocation>
-      {/* <form onSubmit={handleSubmit}>          */}
       <form>
         <label id="cep">
           <input
@@ -140,7 +129,6 @@ export function AddressForm() {
             required
           />
         </label>
-        {/* <button type="submit">enviar</button> */}
       </form>
     </FormDiv>
   )
