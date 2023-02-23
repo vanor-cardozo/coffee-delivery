@@ -62,3 +62,11 @@ export const DivIcon2 = styled(BaseDivIcon)`
 export const DivIcon3 = styled(BaseDivIcon)`
   background: ${(props) => props.theme['yellow-dark']};
 `
+
+export const SuccessImage = styled.div`
+  display: flex;
+  width: 50%;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+`

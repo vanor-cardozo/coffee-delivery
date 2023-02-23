@@ -1,5 +1,5 @@
 import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import {
   DivIcon1,
   DivIcon2,
@@ -7,10 +7,13 @@ import {
   IconAndText,
   IconAndTextDiv,
   SuccessContainer,
+  SuccessImage,
   SuccessText,
 } from './styles'
 
 import { CoffeeContext } from '../../context/CoffeeContext'
+
+import deliveryImage from '../../assets/deliveryImage.svg'
 
 export function Success() {
   const { customerAddress, paymentType } = useContext(CoffeeContext)
@@ -48,6 +51,9 @@ export function Success() {
           </IconAndText>
         </IconAndTextDiv>
       </SuccessText>
+      <SuccessImage>
+        <img src={deliveryImage} alt="" />
+      </SuccessImage>
     </SuccessContainer>
   )
 }
