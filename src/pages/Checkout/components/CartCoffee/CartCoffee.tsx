@@ -14,6 +14,7 @@ import {
 } from './styles'
 import { CoffeeContext } from '../../../../context/CoffeeContext'
 import { Minus, Plus, Trash } from 'phosphor-react'
+import { useNavigate } from 'react-router-dom'
 
 export function CartCoffee() {
   const {
@@ -25,6 +26,7 @@ export function CartCoffee() {
   } = useContext(CoffeeContext)
   const [deliveryCost, setDeliveryCost] = useState(0)
   const itemsSelected = customerCart.filter((coffee) => coffee.quantity > 0)
+  const navigate = useNavigate()
 
   function subTotal(price, quantity) {
     const sub = price * quantity
@@ -81,7 +83,9 @@ export function CartCoffee() {
       </TextContainer>
       <ButtonDiv>
         {customerAddress.city && paymentType && itemsTotal > 0 ? (
-          <ConfirmButton>CONFIRMAR PEDIDO</ConfirmButton>
+          <ConfirmButton onClick={() => navigate('/success')}>
+            CONFIRMAR PEDIDO
+          </ConfirmButton>
         ) : (
           <ConfirmButtonDisabled>CONFIRMAR PEDIDO</ConfirmButtonDisabled>
         )}
