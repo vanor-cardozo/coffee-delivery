@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Bank, CreditCard, CurrencyDollar, Money } from 'phosphor-react'
 import {
   ButtonsDiv,
@@ -9,11 +9,11 @@ import {
   TitleAndSubtitlePayment,
 } from './styles'
 
-export function PaymentOptions() {
-  const [paymentType, setPaymentType] = useState('')
+import { CoffeeContext } from '../../../../context/CoffeeContext'
 
+export function PaymentOptions() {
+  const { paymentType, setPaymentType } = useContext(CoffeeContext)
   const handlePaymentType = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value)
     e.preventDefault()
     setPaymentType(e.target.value)
   }

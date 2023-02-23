@@ -37,6 +37,7 @@ export function CoffeeContextProvider({
     number: '',
     complement: '',
   })
+  const [paymentType, setPaymentType] = useState('')
 
   function addQuantity(id: number) {
     const findCoffee = customerCart.findIndex((coffee) => coffee.id === id)
@@ -61,6 +62,8 @@ export function CoffeeContextProvider({
         customerCart,
         setCustomerCart,
         customerAddress,
+        paymentType,
+        setPaymentType,
         setCustomerAddress,
         addQuantity,
         minusQuantity,
