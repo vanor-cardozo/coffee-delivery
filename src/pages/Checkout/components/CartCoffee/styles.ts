@@ -140,3 +140,20 @@ export const ConfirmButton = styled.button`
     background: ${(props) => props.theme['yellow-dark']};
   }
 `
+export const ConfirmButtonDisabled = styled.button`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+
+  color: ${(props) => props.theme['base-label']};
+  background: ${(props) => props.theme['base-button']};
+`

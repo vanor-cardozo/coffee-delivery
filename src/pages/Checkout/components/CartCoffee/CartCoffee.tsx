@@ -1,9 +1,10 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {
   ButtonDiv,
   ButtonsDiv,
   CartCoffeeDiv,
   ConfirmButton,
+  ConfirmButtonDisabled,
   RemoveButton,
   ResumeCoffeeCard,
   SelectButtons,
@@ -15,7 +16,9 @@ import { CoffeeContext } from '../../../../context/CoffeeContext'
 import { Minus, Plus, Trash } from 'phosphor-react'
 
 export function CartCoffee() {
-  const { customerCart, minusQuantity, addQuantity } = useContext(CoffeeContext)
+  const { customerCart, minusQuantity, addQuantity, customerAddress } =
+    useContext(CoffeeContext)
+  const [deliveryCost, setDeliveryCost] = useState(0)
   const itemsSelected = customerCart.filter((coffee) => coffee.quantity > 0)
 
   function subTotal(price, quantity) {
@@ -27,7 +30,13 @@ export function CartCoffee() {
     .map((item) => item.quantity * item.price)
     .reduce((accum, curr) => accum + curr, 0)
 
-  const cartTotal = itemsTotal + 3.5
+  useEffect(() => {
+    if (customerAddress.city) {
+      setDeliveryCost(3.5)
+    }
+  }, [customerAddress])
+
+  const cartTotal = itemsTotal + deliveryCost
 
   return (
     <CartCoffeeDiv>
@@ -58,7 +67,7 @@ export function CartCoffee() {
         </TextDiv>
         <TextDiv>
           <p>Entrega</p>
-          <h5>R$ 3.50</h5>
+          {deliveryCost ? <h5>{deliveryCost.toFixed(2)}</h5> : <h5>-</h5>}
         </TextDiv>
         <TextDiv>
           <h4>Total</h4>
@@ -66,7 +75,11 @@ export function CartCoffee() {
         </TextDiv>
       </TextContainer>
       <ButtonDiv>
-        <ConfirmButton>CONFIRMAR PEDIDO</ConfirmButton>
+        {customerAddress.city && itemsTotal > 0 ? (
+          <ConfirmButton>CONFIRMAR PEDIDO</ConfirmButton>
+        ) : (
+          <ConfirmButtonDisabled>CONFIRMAR PEDIDO</ConfirmButtonDisabled>
+        )}
       </ButtonDiv>
     </CartCoffeeDiv>
   )
