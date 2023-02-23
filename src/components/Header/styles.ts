@@ -11,6 +11,21 @@ export const HeaderContainer = styled.header`
     display: flex;
     gap: 0.5rem;
   }
+
+  p {
+    height: 22px;
+    width: 22px;
+    color: ${(props) => props.theme.white};
+    background-color: ${(props) => props.theme['yellow-dark']};
+    border-radius: 50%;
+    padding: 0.25rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    position: relative;
+    top: -10px;
+    left: -22px;
+  }
 `
 
 const BaseButton = styled.button`
