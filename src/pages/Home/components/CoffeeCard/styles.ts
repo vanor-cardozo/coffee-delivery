@@ -103,6 +103,7 @@ export const SelectButtons = styled.button`
   padding: 0.5rem;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 
   color: ${(props) => props.theme['purple-med']};
   &:hover {
