@@ -7,7 +7,7 @@ import { CoffeeContext } from '../../context/CoffeeContext'
 import { useContext } from 'react'
 
 export function Header() {
-  const { customerCart } = useContext(CoffeeContext)
+  const { customerCart, customerAddress } = useContext(CoffeeContext)
 
   const itemsInCart = customerCart.filter((coffee) => coffee.quantity > 0)
   const countItems = itemsInCart
@@ -23,8 +23,13 @@ export function Header() {
       </span>
       <nav>
         <LocationButton>
-          <MapPin size={22} weight="fill" />
-          Porto Alegre -RS
+          <MapPin
+            size={22}
+            weight="fill"
+            onClick={() => navigate('/checkout')}
+          />
+          {customerAddress.city &&
+            `${customerAddress.city}, ${customerAddress.state}`}
         </LocationButton>
         <CartButton onClick={() => navigate('/checkout')}>
           <ShoppingCart size={22} weight="fill" />
