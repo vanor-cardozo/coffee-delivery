@@ -23,6 +23,7 @@ export function CartCoffee() {
     addQuantity,
     customerAddress,
     paymentType,
+    removeCoffee,
   } = useContext(CoffeeContext)
   const [deliveryCost, setDeliveryCost] = useState(0)
   const itemsSelected = customerCart.filter((coffee) => coffee.quantity > 0)
@@ -58,7 +59,7 @@ export function CartCoffee() {
                 <h6>{coffee.quantity}</h6>
                 <Plus size={22} onClick={() => addQuantity(coffee.id)} />
               </SelectButtons>
-              <RemoveButton>
+              <RemoveButton onClick={() => removeCoffee(coffee.id)}>
                 <Trash size={20} weight="light" />
                 REMOVER
               </RemoveButton>

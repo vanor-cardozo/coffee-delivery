@@ -56,6 +56,12 @@ export function CoffeeContextProvider({
       setCustomerCart(tempCustomerCart)
     }
   }
+
+  function removeCoffee(id: number) {
+    const newListCoffee = customerCart.filter((coffee) => coffee.id !== id)
+    setCustomerCart(newListCoffee)
+  }
+
   return (
     <CoffeeContext.Provider
       value={{
@@ -67,6 +73,7 @@ export function CoffeeContextProvider({
         setCustomerAddress,
         addQuantity,
         minusQuantity,
+        removeCoffee,
       }}
     >
       {children}
