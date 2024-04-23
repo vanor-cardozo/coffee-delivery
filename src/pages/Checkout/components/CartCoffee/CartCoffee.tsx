@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, { useContext, useEffect, useState } from "react";
 import {
   ButtonDiv,
@@ -29,7 +30,7 @@ export function CartCoffee() {
   const itemsSelected = customerCart.filter((coffee) => coffee.quantity > 0);
   const navigate = useNavigate();
 
-  function subTotal(price, quantity) {
+  function subTotal(price: number, quantity: number) {
     const sub = price * quantity;
     return sub.toFixed(2);
   }
