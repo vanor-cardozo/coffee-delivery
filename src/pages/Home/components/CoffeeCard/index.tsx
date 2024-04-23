@@ -8,17 +8,18 @@ import {
   TagClassification,
   TagsContainer,
   TitleMenu,
-} from './styles'
+} from "./styles";
 
-import { Minus, Plus, ShoppingCart } from 'phosphor-react'
+import { Minus, Plus, ShoppingCart } from "phosphor-react";
 
-import { useContext } from 'react'
-import { CoffeeContext } from '../../../../context/CoffeeContext'
-import { useNavigate } from 'react-router-dom'
+import { useContext } from "react";
+import { CoffeeContext } from "../../../../context/CoffeeContext";
+import { useNavigate } from "react-router-dom";
 
 export function CoffeeCard() {
-  const { addQuantity, minusQuantity, customerCart } = useContext(CoffeeContext)
-  const navigate = useNavigate()
+  const { addQuantity, minusQuantity, customerCart } =
+    useContext(CoffeeContext);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -47,7 +48,7 @@ export function CoffeeCard() {
                   <ShoppingCart
                     size={22}
                     weight="fill"
-                    onClick={() => navigate('/checkout')}
+                    onClick={() => navigate("/coffee-delivery/checkout")}
                   />
                 </CartButton>
               </DivCardFooter>
@@ -56,5 +57,5 @@ export function CoffeeCard() {
         ))}
       </CardsContainer>
     </>
-  )
+  );
 }

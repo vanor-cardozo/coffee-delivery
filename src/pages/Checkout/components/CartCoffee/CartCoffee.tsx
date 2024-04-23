@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from "react";
 import {
   ButtonDiv,
   ButtonsDiv,
@@ -11,10 +11,10 @@ import {
   SelectDiv,
   TextContainer,
   TextDiv,
-} from './styles'
-import { CoffeeContext } from '../../../../context/CoffeeContext'
-import { Minus, Plus, Trash } from 'phosphor-react'
-import { useNavigate } from 'react-router-dom'
+} from "./styles";
+import { CoffeeContext } from "../../../../context/CoffeeContext";
+import { Minus, Plus, Trash } from "phosphor-react";
+import { useNavigate } from "react-router-dom";
 
 export function CartCoffee() {
   const {
@@ -24,27 +24,27 @@ export function CartCoffee() {
     customerAddress,
     paymentType,
     removeCoffee,
-  } = useContext(CoffeeContext)
-  const [deliveryCost, setDeliveryCost] = useState(0)
-  const itemsSelected = customerCart.filter((coffee) => coffee.quantity > 0)
-  const navigate = useNavigate()
+  } = useContext(CoffeeContext);
+  const [deliveryCost, setDeliveryCost] = useState(0);
+  const itemsSelected = customerCart.filter((coffee) => coffee.quantity > 0);
+  const navigate = useNavigate();
 
   function subTotal(price, quantity) {
-    const sub = price * quantity
-    return sub.toFixed(2)
+    const sub = price * quantity;
+    return sub.toFixed(2);
   }
 
   const itemsTotal = itemsSelected
     .map((item) => item.quantity * item.price)
-    .reduce((accum, curr) => accum + curr, 0)
+    .reduce((accum, curr) => accum + curr, 0);
 
   useEffect(() => {
     if (customerAddress.city) {
-      setDeliveryCost(3.5)
+      setDeliveryCost(3.5);
     }
-  }, [customerAddress])
+  }, [customerAddress]);
 
-  const cartTotal = itemsTotal + deliveryCost
+  const cartTotal = itemsTotal + deliveryCost;
 
   return (
     <CartCoffeeDiv>
@@ -84,7 +84,7 @@ export function CartCoffee() {
       </TextContainer>
       <ButtonDiv>
         {customerAddress.city && paymentType && itemsTotal > 0 ? (
-          <ConfirmButton onClick={() => navigate('/success')}>
+          <ConfirmButton onClick={() => navigate("/coffee-delivery/success")}>
             CONFIRMAR PEDIDO
           </ConfirmButton>
         ) : (
@@ -92,5 +92,5 @@ export function CartCoffee() {
         )}
       </ButtonDiv>
     </CartCoffeeDiv>
-  )
+  );
 }
