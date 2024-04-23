@@ -1,16 +1,20 @@
 
 ## 💻 Sobre o projeto
 
-Coffee Delivery - esse webApp fornece um contador de minutos para projetos/tarefas criando um histórico com o status e tempo decorrido de cada projeto. O desafio na contrução de um Timer é dominar o ciclo de vida dos componentes (useEffect) garantindo o funcionamento, integridade e o gerenciamento das renderizações. Clique no link abaixo para conferir o deploy da aplicação!
+Coffee Delivery - essa aplicação é resposnsável por gerenciar um carrinho de compras para uma cafeteria. Os principais conceitos utilizados foram: ContextAPI, Local storage, Imutabilidade do estado e Componentização. Clique no link abaixo para conferir o deploy!
 <p align="left"><a href="https://vanor-cardozo.github.io/coffee-delivery/">acessar webApp</a></p>
 
 ## ⚙️ Funcionalidades
 
-    - Adicionar um projeto/tarefa 
-    - Selecionar um período para conclusão (minutos)
-    - Histórico dos projetos
+    - Listagem de produtos (cafés) disponíveis para compra
+    - Adicionar uma quantidade específicas de itens no carrinho
+    - Aumentar ou remover a quantidade de itens no carrinho
+    - Formulário para o usuário preencher o seu endereço
+    - Exibir o total de itens no carrinho no Header
+    - Exibir o valor total da soma de itens no carrinho multiplicados pelo valor
+
   
-## 🛠 Tecnologias
+## 🛠 Tecnologias e Conceitos utilizados
 
 - [x] WebApp (React + TypeScript)
     - Styled components (CSS)
@@ -22,5 +26,5 @@ Coffee Delivery - esse webApp fornece um contador de minutos para projetos/taref
 ---
 
 <div align="center">
-    <img alt="Rodapé com imagem e nome do autor Vanor Cardozo" title="eSports" src="banner_readme_timer_project.png"/>
+    <img alt="Rodapé com imagem e nome do autor Vanor Cardozo" title="eSports" src="banner_readme_coffee_delivery.png"/>
 </div>
