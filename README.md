@@ -16,7 +16,7 @@ Coffee Delivery - essa aplicação é resposnsável por gerenciar um carrinho de
     - Exibir o valor total da soma de itens no carrinho multiplicados pelo valor
 
   
-## 🛠 Tecnologias e Conceitos utilizados
+## 🛠 Tecnologias
 
 - [x] WebApp (React + TypeScript)
     - Styled components (CSS)
