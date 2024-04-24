@@ -4,6 +4,8 @@
 Coffee Delivery - essa aplicação é resposnsável por gerenciar um carrinho de compras para uma cafeteria. Os principais conceitos utilizados foram: ContextAPI, Local storage, Imutabilidade do estado e Componentização. Clique no link abaixo para conferir o deploy!
 <p align="left"><a href="https://vanor-cardozo.github.io/coffee-delivery/">acessar webApp</a></p>
 
+<img src="/coffee_delivery_mockup.gif" />
+
 ## ⚙️ Funcionalidades
 
     - Listagem de produtos (cafés) disponíveis para compra
